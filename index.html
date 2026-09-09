@@ -82,56 +82,58 @@ tr.g3 td{background:#FFF3E0!important;}
 [data-tip]:hover::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 5px);left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:4px 9px;border-radius:5px;font-size:11px;white-space:nowrap;z-index:300;pointer-events:none;}
 /* mobile */
 @media(max-width:768px){
-  /* запрет авто-ссылок iOS */
-  a[href^="tel"],a[href^="sms"]{color:inherit!important;text-decoration:none!important;pointer-events:none;}
-  .num,.num span{color:#fff!important;}
+  body{overflow-x:hidden;}
+  * {-webkit-text-size-adjust:100%;}
+  /* числа не синие на iOS */
+  .num{color:#fff!important;}
   .neg{color:#ff7070!important;}
   /* layout */
-  .hdr-in{padding:10px 14px;gap:10px;}
-  .htitle{font-size:15px;}
+  .hdr-in{padding:10px 12px;gap:8px;}
+  .htitle{font-size:14px;}
   .hdate{display:none;}
-  .tabs{padding:0 6px;}
-  .tb{padding:8px 10px;font-size:11px;}
-  .tab-content,.page{padding:10px;}
-  /* tables */
-  .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:8px;}
-  table{min-width:360px;table-layout:auto;}
-  th{padding:8px 8px;font-size:11px;}
-  td{padding:7px 8px;font-size:12px;}
+  .tabs{padding:0 4px;}
+  .tb{padding:8px 9px;font-size:11px;}
+  .tab-content,.page{padding:10px;overflow-x:hidden;}
+  /* ГЛАВНЫЙ ФИК: убираем overflow:hidden у карточек — они блокировали скролл таблиц */
+  .rcard{overflow:visible!important;margin-bottom:12px;}
+  .rcbody{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;}
+  .rntr-block{overflow:visible!important;margin:6px 8px;}
+  .rntr-body{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  /* таблицы */
+  .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;display:block;width:100%;}
+  table{min-width:auto;width:max-content;}
+  th{padding:7px 8px;font-size:11px;white-space:nowrap;}
+  td{padding:7px 8px;font-size:12px;white-space:nowrap;}
   .bw{display:none;}
-  /* hide non-essential columns on mobile */
-  .mob-hide{display:none!important;}
-  /* summary */
+  /* summary strip */
   .sum-strip{padding:8px 10px;gap:8px;flex-wrap:wrap;}
   .sum-card{min-width:calc(50% - 4px);padding:8px 10px;flex:1;}
-  .sum-value{font-size:14px;}
+  .sum-value{font-size:13px;}
   .sum-label{font-size:9px;}
+  .share-bar-wrap{width:100%;}
   /* stat cards */
   .sbar{gap:8px;flex-wrap:wrap;}
   .sc{padding:8px 10px;min-width:calc(50% - 4px);flex:1;}
-  .sc-v{font-size:15px;}
+  .sc-v{font-size:14px;}
   .sc-l{font-size:9px;}
   /* search */
-  .srch{max-width:100%;margin-bottom:10px;}
-  /* RSO cards */
-  .rcard{border-radius:8px;margin-bottom:12px;}
+  .srch{max-width:100%;}
+  /* RSO headers */
   .rchead{padding:10px 12px;gap:8px;flex-wrap:wrap;}
-  .rname{font-size:13px;}
+  .rname{font-size:12px;}
   .rchp{font-size:10px;}
-  .rntr-block{margin:6px 8px;}
   .rntr-head{font-size:11px;padding:6px 10px;flex-wrap:wrap;gap:6px;}
-  .rntr-body table{min-width:320px;}
-  .rntr-body table th{font-size:10px;padding:6px 8px;}
-  .rntr-body table td{font-size:11px;padding:6px 8px;}
+  .rntr-body table th{font-size:10px;padding:6px 7px;}
+  .rntr-body table td{font-size:11px;padding:6px 7px;}
   /* trophy */
-  .thdr{gap:8px;margin-bottom:12px;}
-  .tico{font-size:24px;}
-  .ttext h2{font-size:16px;}
+  .thdr{gap:8px;margin-bottom:10px;}
+  .tico{font-size:22px;}
+  .ttext h2{font-size:15px;}
   .ttext p{font-size:11px;}
   /* badge */
-  .badge{min-width:26px;height:22px;font-size:10px;}
+  .badge{min-width:24px;height:20px;font-size:10px;padding:0 5px;}
   /* stitle */
-  .stitle{font-size:13px;margin:16px 0 10px;}
+  .stitle{font-size:12px;margin:14px 0 8px;}
 }
 /* summary strip */
 .sum-strip{background:var(--dk);padding:10px 24px;display:flex;gap:12px;flex-wrap:wrap;border-bottom:1px solid #444;}
@@ -165,7 +167,7 @@ tr.g3 td{background:#FFF3E0!important;}
 <div class="hdr"><div class="hdr-in">
   <div class="logo">АК</div>
   <div><div class="htitle">Рейтинг Москва</div></div>
-  <div class="hdate">Данные: 09.09.xlsx<br>Обновлено: 09.09.2026 16:23</div>
+  <div class="hdate">Данные: 09.09.xlsx<br>Обновлено: 09.09.2026 16:30</div>
 </div></div>
 <div class="tabs"><button class="tb on" onclick="showTab('q1',this)">🏙 МСК по РСО и РНТР</button><button class="tb" onclick="showTab('q2',this)">🌍 Страна + РСО</button></div><div class="sum-strip">
       <div class="sum-card">
