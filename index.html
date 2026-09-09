@@ -79,6 +79,33 @@ tr.g3 td{background:#FFF3E0!important;}
 .ttext p{font-size:12px;color:var(--mg);margin-top:2px;}
 [data-tip]{position:relative;cursor:help;border-bottom:1px dashed var(--mg);}
 [data-tip]:hover::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 5px);left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:4px 9px;border-radius:5px;font-size:11px;white-space:nowrap;z-index:300;pointer-events:none;}
+/* mobile */
+@media(max-width:768px){
+  .hdr-in{padding:10px 14px;gap:10px;}
+  .htitle{font-size:15px;}
+  .hdate{display:none;}
+  .tabs{padding:0 8px;}
+  .tb{padding:9px 12px;font-size:12px;}
+  .tab-content,.page{padding:12px;}
+  .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  table{min-width:500px;}
+  th,td{padding:7px 9px;font-size:12px;}
+  .bw{display:none;}
+  .sum-strip{padding:8px 12px;gap:8px;}
+  .sum-card{min-width:120px;padding:8px 12px;}
+  .sum-value{font-size:15px;}
+  .sbar{gap:8px;}
+  .sc{padding:10px 12px;min-width:120px;}
+  .sc-v{font-size:16px;}
+  .srch{max-width:100%;}
+  .rchead{padding:10px 12px;gap:8px;flex-wrap:wrap;}
+  .rname{font-size:13px;}
+  .rntr-head{font-size:11px;flex-wrap:wrap;}
+  .rntr-body table{min-width:400px;}
+  .thdr{gap:8px;}
+  .tico{font-size:26px;}
+  .ttext h2{font-size:17px;}
+}
 /* summary strip */
 .sum-strip{background:var(--dk);padding:10px 24px;display:flex;gap:12px;flex-wrap:wrap;border-bottom:1px solid #444;}
 .sum-card{display:flex;flex-direction:column;align-items:flex-start;background:#3a3a3a;border-radius:8px;padding:10px 18px;min-width:170px;flex:1;position:relative;overflow:hidden;}
@@ -111,7 +138,7 @@ tr.g3 td{background:#FFF3E0!important;}
 <div class="hdr"><div class="hdr-in">
   <div class="logo">АК</div>
   <div><div class="htitle">Рейтинг Москва</div></div>
-  <div class="hdate">Данные: 09.09.xlsx<br>Обновлено: 09.09.2026 15:47</div>
+  <div class="hdate">Данные: 09.09.xlsx<br>Обновлено: 09.09.2026 16:14</div>
 </div></div>
 <div class="tabs"><button class="tb on" onclick="showTab('q1',this)">🏙 МСК по РСО и РНТР</button><button class="tb" onclick="showTab('q2',this)">🌍 Страна + РСО</button></div><div class="sum-strip">
       <div class="sum-card">
