@@ -111,7 +111,7 @@ tr.g3 td{background:#FFF3E0!important;}
 <div class="hdr"><div class="hdr-in">
   <div class="logo">АК</div>
   <div><div class="htitle">Рейтинг Москва</div></div>
-  <div class="hdate">Данные: 09.09.xlsx<br>Обновлено: 09.09.2026 14:55</div>
+  <div class="hdate">Данные: 09.09.xlsx<br>Обновлено: 09.09.2026 15:41</div>
 </div></div>
 <div class="tabs"><button class="tb on" onclick="showTab('q1',this)">🏙 МСК по РСО и РНТР</button><button class="tb" onclick="showTab('q2',this)">🌍 Страна + РСО</button></div><div class="sum-strip">
       <div class="sum-card">
@@ -14475,14 +14475,18 @@ document.addEventListener('DOMContentLoaded',function(){
   <div class="lk-title">ЗОЛОТАЯ ЛИГА</div>
   <div class="lk-sub">Введите пароль для входа</div>
   <form class="lk-form" onsubmit="lkCheck(event)">
-    <input id="lk-inp" class="lk-inp" type="password" placeholder="Пароль" autocomplete="off">
+    <div style="position:relative;display:flex;align-items:center;">
+      <input id="lk-inp" class="lk-inp" type="password" placeholder="Пароль" autocomplete="off" style="width:100%;padding-right:44px;">
+      <button type="button" onclick="lkToggle()" style="position:absolute;right:10px;background:none;border:none;color:#888;cursor:pointer;font-size:18px;" id="lk-eye">👁</button>
+    </div>
     <div class="lk-err" id="lk-err"></div>
     <button class="lk-btn" type="submit">Войти</button>
   </form>
   <div class="lk-hint">Доступ только для участников конкурса</div>
 </div>
 <script>
-var _P='ДСПМ2026',_K='zl_ok';
+var _P='Осетия2026',_K='zl_ok';
+function lkToggle(){var i=document.getElementById('lk-inp');i.type=i.type==='password'?'text':'password';document.getElementById('lk-eye').textContent=i.type==='password'?'👁':'🙈';}
 function lkCheck(e){e.preventDefault();
   if(document.getElementById('lk-inp').value===_P){
     sessionStorage.setItem(_K,'1');
