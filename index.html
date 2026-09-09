@@ -83,56 +83,53 @@ tr.g3 td{background:#FFF3E0!important;}
 /* mobile */
 @media(max-width:768px){
   body{overflow-x:hidden;}
-  * {-webkit-text-size-adjust:100%;}
-  /* числа не синие на iOS */
-  .num{color:#fff!important;}
-  .neg{color:#ff7070!important;}
-  /* layout */
   .hdr-in{padding:10px 12px;gap:8px;}
-  .htitle{font-size:14px;}
+  .htitle{font-size:14px;letter-spacing:0;}
   .hdate{display:none;}
   .tabs{padding:0 4px;}
   .tb{padding:8px 9px;font-size:11px;}
   .tab-content,.page{padding:10px;overflow-x:hidden;}
-  /* ГЛАВНЫЙ ФИК: убираем overflow:hidden у карточек — они блокировали скролл таблиц */
+  /* карточки — overflow:visible чтобы таблица внутри скроллилась */
   .rcard{overflow:visible!important;margin-bottom:12px;}
-  .rcbody{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;}
+  .rcbody{overflow-x:auto;-webkit-overflow-scrolling:touch;}
   .rntr-block{overflow:visible!important;margin:6px 8px;}
   .rntr-body{overflow-x:auto;-webkit-overflow-scrolling:touch;}
-  /* таблицы */
+  /* таблицы — горизонтальный скролл */
   .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;display:block;width:100%;}
-  table{min-width:auto;width:max-content;}
-  th{padding:7px 8px;font-size:11px;white-space:nowrap;}
-  td{padding:7px 8px;font-size:12px;white-space:nowrap;}
+  table{width:max-content;min-width:280px;}
+  th{padding:6px 8px;font-size:11px;white-space:nowrap;}
+  td{padding:6px 8px;font-size:12px;white-space:nowrap;color:#222;}
+  .num{color:#222;text-align:right;}
+  .neg{color:#c0392b;}
+  tr.g1 td{color:#222!important;}
+  tr.g2 td{color:#222!important;}
+  tr.g3 td{color:#222!important;}
+  tr.tgt td{color:#222!important;}
   .bw{display:none;}
-  /* summary strip */
+  /* summary */
   .sum-strip{padding:8px 10px;gap:8px;flex-wrap:wrap;}
   .sum-card{min-width:calc(50% - 4px);padding:8px 10px;flex:1;}
   .sum-value{font-size:13px;}
   .sum-label{font-size:9px;}
-  .share-bar-wrap{width:100%;}
   /* stat cards */
   .sbar{gap:8px;flex-wrap:wrap;}
   .sc{padding:8px 10px;min-width:calc(50% - 4px);flex:1;}
   .sc-v{font-size:14px;}
   .sc-l{font-size:9px;}
-  /* search */
   .srch{max-width:100%;}
-  /* RSO headers */
+  /* RSO */
   .rchead{padding:10px 12px;gap:8px;flex-wrap:wrap;}
   .rname{font-size:12px;}
   .rchp{font-size:10px;}
   .rntr-head{font-size:11px;padding:6px 10px;flex-wrap:wrap;gap:6px;}
-  .rntr-body table th{font-size:10px;padding:6px 7px;}
-  .rntr-body table td{font-size:11px;padding:6px 7px;}
+  .rntr-body table th{font-size:10px;padding:5px 7px;}
+  .rntr-body table td{font-size:11px;padding:5px 7px;color:#222;}
   /* trophy */
   .thdr{gap:8px;margin-bottom:10px;}
   .tico{font-size:22px;}
   .ttext h2{font-size:15px;}
   .ttext p{font-size:11px;}
-  /* badge */
   .badge{min-width:24px;height:20px;font-size:10px;padding:0 5px;}
-  /* stitle */
   .stitle{font-size:12px;margin:14px 0 8px;}
 }
 /* summary strip */
@@ -167,7 +164,7 @@ tr.g3 td{background:#FFF3E0!important;}
 <div class="hdr"><div class="hdr-in">
   <div class="logo">АК</div>
   <div><div class="htitle">Рейтинг Москва</div></div>
-  <div class="hdate">Данные: 09.09.xlsx<br>Обновлено: 09.09.2026 16:30</div>
+  <div class="hdate">Данные: 09.09.xlsx<br>Обновлено: 09.09.2026 16:35</div>
 </div></div>
 <div class="tabs"><button class="tb on" onclick="showTab('q1',this)">🏙 МСК по РСО и РНТР</button><button class="tb" onclick="showTab('q2',this)">🌍 Страна + РСО</button></div><div class="sum-strip">
       <div class="sum-card">
